@@ -1,0 +1,70 @@
+{
+  "expo": {
+    "name": "Blossom and Bloom Marketing",
+    "slug": "blossom-bloom-marketing",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "scheme": "blossombloom",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.blossombloom.marketing",
+      "buildNumber": "1",
+      "infoPlist": {
+        "NSFaceIDUsageDescription": "Enable Face ID for quick and secure login",
+        "NSPhotoLibraryUsageDescription": "Upload photos and videos for your marketing content",
+        "NSCameraUsageDescription": "Take photos and videos for your marketing content"
+      }
+    },
+    "android": {
+      "package": "com.blossombloom.marketing",
+      "adaptiveIcon": {
+        "backgroundColor": "#FF6B35",
+        "foregroundImage": "./assets/images/android-icon-foreground.png",
+        "backgroundImage": "./assets/images/android-icon-background.png",
+        "monochromeImage": "./assets/images/android-icon-monochrome.png"
+      },
+      "edgeToEdgeEnabled": true,
+      "predictiveBackGestureEnabled": false
+    },
+    "web": {
+      "output": "single",
+      "favicon": "./assets/images/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/images/splash-icon.png",
+          "imageWidth": 200,
+          "resizeMode": "contain",
+          "backgroundColor": "#FF6B35",
+          "dark": {
+            "backgroundColor": "#E85A2A"
+          }
+        }
+      ],
+      "expo-web-browser",
+      "expo-local-authentication",
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Allow Blossom and Bloom to access your photos for content uploads",
+          "cameraPermission": "Allow Blossom and Bloom to use your camera for content capture"
+        }
+      ],
+      [
+        "expo-media-library",
+        {
+          "photosPermission": "Allow Blossom and Bloom to save your marketing content",
+          "savePhotosPermission": "Allow Blossom and Bloom to save edited photos"
+        }
+      ]
+    ],
+    "experiments": {
+      "reactCompiler": true
+    }
+  }
+}
